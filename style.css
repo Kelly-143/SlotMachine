@@ -1,0 +1,238 @@
+/* Basic styles for the slot machine */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+.slot-machine {
+  background: #222;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.slot-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.slot {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #777;
+  margin: 0 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.symbols {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: top 1s;
+}
+
+.symbol {
+  flex: 1;
+  text-align: center;
+  line-height: 100px;
+  font-size: 2rem;
+  color: #333;
+  background: #f9f9f9;
+}
+
+#spin-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background: #f39c12;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#spin-button:hover {
+  background: #e67e22;
+}
+
+#result {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#popup-container {
+  margin-top: 20px;
+}
+
+#continue-button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  background: #3498db;
+  color: #fff;
+  border-radius: 5px;
+}
+
+#continue-button:hover {
+  background: #2980b9;
+}
+
+/* Hidden class for the popup container */
+.hidden {
+  display: none;
+}
+
+/* Styles for the blank page */
+body.blank-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FF6EC7; /* Neon pink background */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.animated-text-container {
+  position: relative;
+}
+
+.text-image {
+  display: none; /* Initially hide all text-image pairs */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.animated-text {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+.show {
+  display: flex;
+  animation: fadeInOut 4s linear;
+}
+
+.loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.loading-bar {
+  width: 100px;
+  height: 10px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-bar::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #3498db;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  50% { left: 0; }
+  100% { left: 100%; }
+}
+
+.loading-text {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px; /* Capsule shape */
+  color: #fff;
+}
+
+#bati {
+  background-color: #FFB6C1; /* Light pink */
+  border: 2px solid #fff; /* White border */
+}
+
+#hindi {
+  background-color: #fff; /* White background */
+  border: 2px solid #FFB6C1; /* Light pink border */
+  border-radius: 20px; /* Capsule shape */
+  color: #FF6EC7; /* Text color matching the background */
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#video-player {
+  width: 80%; /* Adjust the width as needed */
+  max-width: 800px; /* Set a maximum width for the video */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #fff; /* Optional: Add a border around the video */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+#video-text {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}

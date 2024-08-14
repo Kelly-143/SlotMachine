@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="slot-machine">
+      <div class="slot-container">
+        <div class="slot">
+          <div class="symbols" id="slot1Symbols"></div>
+        </div>
+        <div class="slot">
+          <div class="symbols" id="slot2Symbols"></div>
+        </div>
+        <div class="slot">
+          <div class="symbols" id="slot3Symbols"></div>
+        </div>
+      </div>
+      <button id="spin-button">Spin</button>
+    </div>
+    <div id="result"></div>
+    <div id="popup-container" class="hidden">
+      <button id="continue-button">Continue</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script> <!-- Confetti library -->
+  <script src="main.js"></script> <!-- Your JavaScript file -->
+</body>
+</html>
